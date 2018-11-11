@@ -14,5 +14,5 @@ export interface User {
   intertest?: string;
   introduction: string;
   lookingFor?: string;
-  photo?: Photo[];
+  photos?: Photo[];
 }
