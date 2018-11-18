@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BlogApp.API.Data;
 using BlogApp.API.Dtos;
+using BlogApp.API.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
